@@ -21,6 +21,8 @@ images.forEach((element) => {
   const img = document.createElement("img");
   img.setAttribute("src", element.url);
   img.setAttribute("alt", element.alt);
+  img.setAttribute("height", "300px");
+  img.style.marginRight = "20px";
   item.append(img);
   arrElemGallery.push(item);
 });

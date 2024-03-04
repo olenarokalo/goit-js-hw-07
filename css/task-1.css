@@ -7,18 +7,35 @@ body {
   color: #2e2f42;
 }
 
-ul > .item {
+#categories {
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   background-color: #f6f6fe;
-  border-radius: 8px;
-  padding: 16px;
-  width: 392px;
-  height: 264px;
+
   margin-bottom: 10px;
+  border: #2e2f42;
+}
+
+.item > ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
 }
 
 .item > ul > li {
+  display: flex;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.04em;
+  border: 1px solid #808080;
+  border-radius: 3px;
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 360px;
+  height: 40px;
 }
