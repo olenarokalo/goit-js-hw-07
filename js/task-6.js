@@ -14,22 +14,27 @@ function getRandomHexColor() {
 
 function createBoxes() {
   const amount = Number(input.value);
-  if (amount >= 1 && amount <= 100) {
-    let html = "";
-    let width = 30;
-    let height = 30;
+  if (amount > 0)
+    if (amount >= 1 && amount <= 100) {
+      boxesContainer.innerHTML = "";
 
-    for (let i = 0; i < amount; i++) {
-      const color = getRandomHexColor();
-      html += `<div style="width: ${width}px; height: ${height}px; background-color: ${color};  margin-right: 10px"></div>`;
-      width += 10;
-      height += 10;
+      let html = "";
+      let width = 30;
+      let height = 30;
+
+      for (let i = 0; i < amount; i++) {
+        const color = getRandomHexColor();
+        html += `<div style="width: ${width}px; height: ${height}px; background-color: ${color};  margin-right: 10px"></div>`;
+        width += 10;
+        height += 10;
+      }
+
+      boxesContainer.insertAdjacentHTML("beforeend", html);
+      input.value = "";
     }
-
-    boxesContainer.insertAdjacentHTML("beforeend", html);
-  }
 }
 
 function destroyBoxes() {
   boxesContainer.innerHTML = "";
+  input.value = "";
 }
