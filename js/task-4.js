@@ -10,15 +10,15 @@ function requiredSubmit() {
   const loginValue = loginImput.trim();
   const passwordValue = passwordImput.trim();
 
-  if (loginValue === "" || passwordValue === "") {
-    alert(`All form fields must be filled in`);
-  }
-
   const requiredData = {
     email: loginValue,
     password: passwordValue,
   };
 
-  console.log(requiredData);
-  this.reset();
+  if (loginValue === "" || passwordValue === "") {
+    alert(`All form fields must be filled in`);
+  } else {
+    console.log(requiredData);
+    this.reset();
+  }
 }
